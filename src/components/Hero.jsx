@@ -36,24 +36,6 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.6 }}
-          className="text-base md:text-lg text-cream/50 mb-3 leading-relaxed"
-        >
-          Today isn't just another day...
-        </motion.p>
-
-        <motion.p
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.8 }}
-          className="text-base md:text-lg text-cream/70 mb-6 leading-relaxed"
-        >
-          It's the day someone incredibly special came into this world.
-        </motion.p>
-
-        <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7, delay: 1.0 }}
@@ -71,15 +53,6 @@ export default function Hero() {
           style={{ fontFamily: "var(--font-heading)" }}
         >
           {siteConfig.girlfriendName}
-        </motion.p>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.7, delay: 1.4 }}
-          className="text-xs text-cream/30 mt-3"
-        >
-          {siteConfig.heroSubtitle}
         </motion.p>
       </div>
 
