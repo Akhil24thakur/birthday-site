@@ -11,8 +11,8 @@ export default function Hero() {
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <motion.div style={{ y, opacity }} className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-dark via-dark-mid to-dark" />
-        <div className="absolute top-1/3 left-1/3 w-[500px] h-[500px] rounded-full bg-rose/[0.04] blur-[120px]" />
-        <div className="absolute bottom-1/3 right-1/3 w-[400px] h-[400px] rounded-full bg-purple/[0.06] blur-[100px]" />
+        <div className="absolute top-1/3 left-1/3 w-[500px] h-[500px] rounded-full bg-rose/[0.07] blur-[120px]" />
+        <div className="absolute bottom-1/3 right-1/3 w-[400px] h-[400px] rounded-full bg-purple/[0.08] blur-[100px]" />
       </motion.div>
 
       <div className="relative z-10 text-center px-6 max-w-2xl mx-auto">

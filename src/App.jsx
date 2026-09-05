@@ -7,7 +7,6 @@ import Hero from "./components/Hero";
 import StoryIntro from "./components/StoryIntro";
 import MemoryTimeline from "./components/MemoryTimeline";
 import PhotoGallery from "./components/PhotoGallery";
-import ReasonsSection from "./components/ReasonsSection";
 import LoveLetter from "./components/LoveLetter";
 import SurpriseSection from "./components/SurpriseSection";
 import FinalSection from "./components/FinalSection";
@@ -52,7 +51,6 @@ export default function App() {
             <StoryIntro />
             <MemoryTimeline memories={memories} />
             <PhotoGallery />
-            <ReasonsSection />
             <LoveLetter />
             <SurpriseSection />
             <FinalSection />

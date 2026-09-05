@@ -1,5 +1,5 @@
 export const siteConfig = {
-  girlfriendName: "Her Name",
+  girlfriendName: "Swati Sharma",
 
   birthdayMessage: "Happy Birthday to the most special person in my life ❤️",
 
