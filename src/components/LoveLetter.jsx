@@ -35,7 +35,14 @@ export default function LoveLetter() {
 
   return (
     <section id="letter" className="relative py-20 md:py-28 px-6">
-      <div className="absolute inset-0 bg-gradient-to-b from-dark via-dark-mid to-dark" />
+      <div className="absolute inset-0">
+        <img
+          src="/photos/akhil-bg.png"
+          alt=""
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-dark/80" />
+      </div>
 
       <div className="relative z-10 max-w-5xl mx-auto">
         <motion.div
