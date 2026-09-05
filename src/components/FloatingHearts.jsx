@@ -7,17 +7,17 @@ export default function FloatingHearts() {
   useEffect(() => {
     const interval = setInterval(() => {
       idRef.current += 1;
-      const heart = {
-        id: idRef.current,
-        x: Math.random() * 100,
-        size: 14 + Math.random() * 18,
-        duration: 6 + Math.random() * 6,
-        delay: Math.random() * 0.5,
-        drift: (Math.random() - 0.5) * 80,
-        random: Math.random(),
-      };
-      setHearts((prev) => [...prev.slice(-12), heart]);
-    }, 1200);
+      setHearts((prev) => [
+        ...prev.slice(-6),
+        {
+          id: idRef.current,
+          x: Math.random() * 100,
+          size: 12 + Math.random() * 10,
+          duration: 8 + Math.random() * 6,
+          drift: (Math.random() - 0.5) * 60,
+        },
+      ]);
+    }, 2500);
 
     return () => clearInterval(interval);
   }, []);
@@ -33,8 +33,6 @@ export default function FloatingHearts() {
             "--size": `${h.size}px`,
             "--duration": `${h.duration}s`,
             "--drift": `${h.drift}px`,
-            "--random": h.random,
-            animationDelay: `${h.delay}s`,
           }}
         >
           ❤️

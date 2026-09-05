@@ -10,10 +10,7 @@ export default function EasterEgg() {
     setClicks(next);
     if (next >= 5) {
       setRevealed(true);
-      setTimeout(() => {
-        setRevealed(false);
-        setClicks(0);
-      }, 5000);
+      setTimeout(() => { setRevealed(false); setClicks(0); }, 4000);
     }
   };
 
@@ -21,27 +18,24 @@ export default function EasterEgg() {
     <>
       <button
         onClick={handleClick}
-        className="fixed top-4 left-4 z-[90] w-8 h-8 flex items-center justify-center opacity-20 hover:opacity-40 transition-opacity"
-        aria-label="Secret heart"
+        className="fixed top-4 left-4 z-[90] opacity-10 hover:opacity-25 transition-opacity"
+        aria-label="Secret"
       >
-        <span className="text-sm">❤️</span>
+        <span className="text-xs">❤️</span>
       </button>
 
       <AnimatePresence>
         {revealed && (
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="fixed top-16 left-4 z-[90] glass rounded-xl p-4 max-w-[200px]"
+            exit={{ opacity: 0, y: -10 }}
+            className="fixed top-12 left-4 z-[90] glass rounded-lg px-4 py-3 max-w-[180px]"
           >
-            <p
-              className="text-sm text-cream/80 italic"
-              style={{ fontFamily: "var(--font-handwriting)" }}
-            >
+            <p className="text-xs text-cream/70 italic" style={{ fontFamily: "var(--font-handwriting)" }}>
               You found my secret ❤️
             </p>
-            <p className="text-xs text-cream/50 mt-2">
+            <p className="text-[10px] text-cream/40 mt-1">
               You're the best thing that ever happened to me.
             </p>
           </motion.div>

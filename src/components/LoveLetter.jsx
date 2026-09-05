@@ -34,45 +34,41 @@ export default function LoveLetter() {
   const textToShow = siteConfig.typewriter.enabled ? displayText : birthdayLetter;
 
   return (
-    <section id="letter" className="relative py-20 md:py-32 px-6">
+    <section id="letter" className="relative py-24 md:py-32 px-6">
       <div className="absolute inset-0 bg-gradient-to-b from-dark via-dark-mid to-dark" />
 
-      <div className="relative z-10 max-w-2xl mx-auto">
+      <div className="relative z-10 max-w-xl mx-auto">
         <motion.div
           ref={ref}
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-12"
+          transition={{ duration: 0.7 }}
+          className="text-center mb-10"
         >
-          <div className="section-divider mb-10" />
+          <div className="section-divider mb-8" />
           <h2
-            className="text-3xl md:text-5xl font-bold mb-6 gradient-text"
+            className="text-2xl md:text-4xl font-bold mb-4 gradient-text"
             style={{ fontFamily: "var(--font-heading)" }}
           >
-            A Letter For You ❤️
+            A Letter For You
           </h2>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="letter-paper p-8 md:p-12"
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="letter-paper p-6 md:p-10"
         >
-          <div className="flex items-center gap-3 mb-8">
-            <span className="text-2xl">💌</span>
-            <p
-              className="text-sm text-rose-light/60 italic"
-              style={{ fontFamily: "var(--font-handwriting)" }}
-            >
-              For you, with all my heart
-            </p>
-          </div>
+          <p
+            className="text-xs text-rose-light/50 italic mb-6"
+            style={{ fontFamily: "var(--font-handwriting)" }}
+          >
+            For you, with all my heart
+          </p>
 
           <div
-            className="text-sm md:text-base text-cream/70 leading-loose whitespace-pre-line"
-            style={{ fontFamily: "var(--font-body)" }}
+            className="text-sm text-cream/60 leading-loose whitespace-pre-line"
           >
             {textToShow}
             {siteConfig.typewriter.enabled && !typingDone && inView && (
@@ -80,9 +76,9 @@ export default function LoveLetter() {
             )}
           </div>
 
-          <div className="mt-10 text-right">
+          <div className="mt-8 text-right">
             <p
-              className="text-lg text-rose-light/80 italic"
+              className="text-base text-rose-light/60 italic"
               style={{ fontFamily: "var(--font-handwriting)" }}
             >
               With all my love ❤️

@@ -4,57 +4,54 @@ import { reasons } from "../data/reasons";
 
 function ReasonCard({ reason, index }) {
   const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-50px" });
+  const inView = useInView(ref, { once: true, margin: "-40px" });
 
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 20 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
-      className="glass rounded-2xl p-6 md:p-8 text-center group hover:bg-white/[0.07] transition-colors duration-300"
+      transition={{ duration: 0.5, delay: index * 0.08 }}
+      className="glass rounded-xl p-6 text-center"
     >
-      <div className="text-4xl mb-4">{reason.emoji}</div>
+      <div className="text-2xl mb-3">{reason.emoji}</div>
       <h3
-        className="text-lg md:text-xl font-semibold text-cream mb-3"
+        className="text-sm font-semibold text-cream mb-2"
         style={{ fontFamily: "var(--font-heading)" }}
       >
         {reason.title}
       </h3>
-      <p className="text-sm text-cream/50 leading-relaxed">
-        {reason.text}
-      </p>
+      <p className="text-xs text-cream/40 leading-relaxed">{reason.text}</p>
     </motion.div>
   );
 }
 
 export default function ReasonsSection() {
   const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-100px" });
+  const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="reasons" className="relative py-20 md:py-32 px-6">
+    <section id="reasons" className="relative py-24 md:py-32 px-6">
       <div className="absolute inset-0 bg-gradient-to-b from-dark via-dark-lighter to-dark" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-rose/3 blur-[130px]" />
 
-      <div className="relative z-10 max-w-5xl mx-auto">
+      <div className="relative z-10 max-w-4xl mx-auto">
         <motion.div
           ref={ref}
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.7 }}
+          className="text-center mb-12"
         >
-          <div className="section-divider mb-10" />
+          <div className="section-divider mb-8" />
           <h2
-            className="text-3xl md:text-5xl font-bold mb-6 gradient-text"
+            className="text-2xl md:text-4xl font-bold mb-4 gradient-text"
             style={{ fontFamily: "var(--font-heading)" }}
           >
-            A Few Reasons You're So Special
+            A Few Reasons You're Special
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
           {reasons.map((reason, i) => (
             <ReasonCard key={reason.id} reason={reason} index={i} />
           ))}

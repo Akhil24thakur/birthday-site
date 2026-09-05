@@ -59,24 +59,24 @@ export default function SurpriseSection() {
   };
 
   return (
-    <section id="surprise" className="relative py-20 md:py-32 px-6">
+    <section id="surprise" className="relative py-24 md:py-32 px-6">
       <div className="absolute inset-0 bg-gradient-to-b from-dark via-dark-lighter to-dark" />
 
-      <div className="relative z-10 max-w-2xl mx-auto text-center">
+      <div className="relative z-10 max-w-lg mx-auto text-center">
         <motion.div
           ref={ref}
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.7 }}
         >
-          <div className="section-divider mb-10" />
+          <div className="section-divider mb-8" />
           <h2
-            className="text-3xl md:text-5xl font-bold mb-6 gradient-text"
+            className="text-2xl md:text-4xl font-bold mb-4 gradient-text"
             style={{ fontFamily: "var(--font-heading)" }}
           >
-            Ready for One More Surprise?
+            One More Surprise?
           </h2>
-          <p className="text-cream/50 mb-10">
+          <p className="text-sm text-cream/40 mb-8">
             I have something special saved just for you...
           </p>
         </motion.div>
@@ -85,40 +85,38 @@ export default function SurpriseSection() {
           {!opened ? (
             <motion.button
               key="button"
-              initial={{ opacity: 0, scale: 0.9 }}
+              initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
               onClick={handleOpen}
-              className="px-8 py-4 rounded-full bg-gradient-to-r from-rose to-pink text-white font-medium text-lg shadow-lg shadow-rose/20 hover:shadow-rose/40 transition-shadow"
-              style={{ fontFamily: "var(--font-heading)" }}
+              className="px-6 py-3 rounded-full bg-gradient-to-r from-rose to-pink text-white text-sm font-medium shadow-lg shadow-rose/20"
             >
               Open Your Surprise ❤️
             </motion.button>
           ) : (
             <motion.div
               key="card"
-              initial={{ opacity: 0, scale: 0.8, y: 30 }}
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 0.8, type: "spring" }}
-              className="glass rounded-3xl p-8 md:p-12 max-w-lg mx-auto"
+              transition={{ duration: 0.6, type: "spring" }}
+              className="glass rounded-2xl p-8 max-w-md mx-auto"
             >
-              <div className="text-5xl mb-6">🎁</div>
               <h3
-                className="text-2xl md:text-3xl font-bold text-cream mb-4"
+                className="text-xl md:text-2xl font-bold text-cream mb-4"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
                 Happy Birthday, {siteConfig.girlfriendName} ❤️
               </h3>
-              <p className="text-cream/60 leading-relaxed mb-6">
+              <p className="text-sm text-cream/50 leading-relaxed mb-4">
                 I hope this year brings you everything you've been wishing for.
               </p>
-              <p className="text-cream/60 leading-relaxed mb-6">
+              <p className="text-sm text-cream/50 leading-relaxed mb-6">
                 And I hope I get to be there for many more birthdays with you.
               </p>
               <p
-                className="text-xl text-rose-light italic"
+                className="text-base text-rose-light/70 italic"
                 style={{ fontFamily: "var(--font-handwriting)" }}
               >
                 You deserve the world. ❤️
