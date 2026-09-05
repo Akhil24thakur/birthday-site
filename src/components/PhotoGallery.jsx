@@ -71,7 +71,7 @@ export default function PhotoGallery() {
           >
             Little Moments, Big Memories
           </h2>
-          <p className="text-base text-cream/50 max-w-md mx-auto">
+          <p className="text-sm text-cream/50 max-w-md mx-auto text-center">
             Every photo holds a piece of our story that I never want to forget.
           </p>
         </motion.div>

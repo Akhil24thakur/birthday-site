@@ -32,12 +32,13 @@ export default function SurpriseSection() {
     <section id="surprise" className="relative py-20 md:py-28 px-6">
       <div className="absolute inset-0 bg-gradient-to-b from-dark via-dark-lighter to-dark" />
 
-      <div className="relative z-10 max-w-lg mx-auto text-center">
+      <div className="relative z-10 max-w-lg mx-auto">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
+          className="text-center"
         >
           <div className="section-divider mb-6" />
           <h2
@@ -51,6 +52,7 @@ export default function SurpriseSection() {
           </p>
         </motion.div>
 
+        <div className="text-center">
         <AnimatePresence mode="wait">
           {!opened ? (
             <motion.button
@@ -94,6 +96,7 @@ export default function SurpriseSection() {
             </motion.div>
           )}
         </AnimatePresence>
+        </div>
       </div>
     </section>
   );
