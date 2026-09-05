@@ -5,7 +5,7 @@ export const siteConfig = {
 
   heroSubtitle: "A little website made with a lot of love.",
 
-  birthdayDate: "2026-09-06",
+  birthdayDate: "2026-09-05",
 
   music: {
     enabled: false,
