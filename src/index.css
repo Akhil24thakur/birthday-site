@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-dark: #1a0e16;
-  --color-dark-lighter: #231319;
-  --color-dark-mid: #2e1a24;
-  --color-rose: #d4849f;
-  --color-rose-light: #f0a8c0;
-  --color-pink: #e09ab5;
-  --color-pink-soft: #f5d0e3;
-  --color-cream: #fdf2f0;
-  --color-gold: #d4a76a;
-  --color-gold-light: #e8cfa0;
-  --color-purple: #5a2552;
+  --color-dark: #1a1008;
+  --color-dark-lighter: #231a0e;
+  --color-dark-mid: #2e2014;
+  --color-rose: #e8734a;
+  --color-rose-light: #f0956e;
+  --color-pink: #f4a574;
+  --color-pink-soft: #fddcc8;
+  --color-cream: #fef5ee;
+  --color-gold: #e8a84c;
+  --color-gold-light: #f0c878;
+  --color-purple: #8b3a1a;
   --font-heading: "Playfair Display", serif;
   --font-body: "Inter", sans-serif;
   --font-handwriting: "Dancing Script", cursive;
@@ -80,8 +80,8 @@ body {
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(212, 132, 159, 0.4), 0 0 40px rgba(212, 132, 159, 0.2); }
-  50% { box-shadow: 0 0 30px rgba(212, 132, 159, 0.6), 0 0 60px rgba(212, 132, 159, 0.3); }
+  0%, 100% { box-shadow: 0 0 20px rgba(232, 115, 74, 0.4), 0 0 40px rgba(232, 115, 74, 0.2); }
+  50% { box-shadow: 0 0 30px rgba(232, 115, 74, 0.6), 0 0 60px rgba(232, 115, 74, 0.3); }
 }
 
 @keyframes ken-burns {
@@ -144,7 +144,7 @@ body {
 }
 
 .letter-paper {
-  background: linear-gradient(180deg, rgba(253, 242, 240, 0.05) 0%, rgba(253, 242, 240, 0.02) 100%);
-  border: 1px solid rgba(253, 242, 240, 0.07);
+  background: linear-gradient(180deg, rgba(254, 245, 238, 0.05) 0%, rgba(254, 245, 238, 0.02) 100%);
+  border: 1px solid rgba(254, 245, 238, 0.07);
   border-radius: 8px;
 }

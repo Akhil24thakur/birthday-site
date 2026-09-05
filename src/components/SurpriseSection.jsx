@@ -12,7 +12,7 @@ export default function SurpriseSection() {
     if (!siteConfig.effects.confetti) return;
     const duration = 4000;
     const end = Date.now() + duration;
-    const colors = ["#c77dba", "#e8b4d8", "#d4849f", "#d4a76a", "#fdf2f0"];
+    const colors = ["#e8734a", "#f0956e", "#e8a84c", "#f0c878", "#fef5ee"];
 
     const frame = () => {
       confetti({ particleCount: 2, angle: 60, spread: 55, origin: { x: 0, y: 0.7 }, colors, shapes: ["heart", "circle"], scalar: 1.2 });
