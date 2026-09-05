@@ -86,33 +86,12 @@ export default function PhotoLightbox({ items, index, onClose, onPrev, onNext })
           className="max-w-4xl w-full max-h-[85vh] flex flex-col items-center"
           onClick={(e) => e.stopPropagation()}
         >
-          <div className="relative w-full flex-1 min-h-0">
-            <img
-              src={item.image}
-              alt={item.caption || item.title}
-              className="w-full h-full object-contain rounded-lg max-h-[65vh]"
-              onError={(e) => {
-                e.target.style.display = "none";
-              }}
-            />
-          </div>
-          <div className="text-center mt-4">
-            <h3
-              className="text-xl font-semibold text-cream mb-1"
-              style={{ fontFamily: "var(--font-heading)" }}
-            >
-              {item.title}
-            </h3>
-            <p className="text-sm text-cream/50 mb-1">{item.date}</p>
-            {item.caption && (
-              <p
-                className="text-sm text-rose-light/70 italic"
-                style={{ fontFamily: "var(--font-handwriting)" }}
-              >
-                {item.caption}
-              </p>
-            )}
-          </div>
+          <img
+            src={item.image}
+            alt={item.caption || item.title}
+            className="w-full max-h-[80vh] object-contain rounded-lg"
+            onError={(e) => { e.target.style.display = "none"; }}
+          />
         </motion.div>
       </motion.div>
     </AnimatePresence>
