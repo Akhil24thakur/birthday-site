@@ -64,7 +64,7 @@ export default function FinalSection() {
         >
           <div className="section-divider" />
           <p className="text-[10px] text-cream/25 mt-4 tracking-wider">
-            Made with love, just for you ❤️
+            Made with love, just for Swatu ❤️
           </p>
         </motion.div>
       </div>

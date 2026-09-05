@@ -24,12 +24,12 @@ export default function StoryIntro() {
           </h2>
         </motion.div>
 
-        <motion.p
-          initial={{ opacity: 0, y: 15 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="text-sm md:text-base text-cream/45 leading-relaxed"
-        >
+       <motion.p
+  initial={{ opacity: 0, y: 15 }}
+  animate={inView ? { opacity: 1, y: 0 } : {}}
+  transition={{ duration: 0.7, delay: 0.2 }}
+  className="mb-[15px] text-sm md:text-base text-cream/45 leading-relaxed"
+>
           Some moments are ordinary when they happen...
           <br />
           until they become memories we never want to forget.
