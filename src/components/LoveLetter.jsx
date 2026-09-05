@@ -41,7 +41,7 @@ export default function LoveLetter() {
           alt=""
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-dark/50" />
+        <div className="absolute inset-0 bg-dark/80" />
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto">
@@ -67,7 +67,7 @@ export default function LoveLetter() {
           </p>
         </motion.div>
 
-        <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
+        <div className="flex justify-center">
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -89,36 +89,6 @@ export default function LoveLetter() {
                 With all my love ❤️
               </p>
             </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.7, delay: 0.4 }}
-            className="hidden md:block w-72 lg:w-80 flex-shrink-0"
-          >
-            <div className="photo-card" style={{ transform: "rotate(2deg)" }}>
-              <div className="aspect-[3/4] overflow-hidden rounded-sm">
-                <img
-                  src="/birthday-site/photos/letter.jpg"
-                  alt="Us"
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    e.target.style.display = "none";
-                    e.target.nextSibling.style.display = "flex";
-                  }}
-                />
-                <div className="absolute inset-0 bg-dark-mid/40 flex items-center justify-center text-cream/30 text-xs hidden">
-                  📷
-                </div>
-              </div>
-            </div>
-            <p
-              className="text-center text-xs text-cream/30 mt-2 italic"
-              style={{ fontFamily: "var(--font-handwriting)" }}
-            >
-              Always together ❤️
-            </p>
           </motion.div>
         </div>
       </div>
