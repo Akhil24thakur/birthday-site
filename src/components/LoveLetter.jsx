@@ -37,7 +37,7 @@ export default function LoveLetter() {
     <section id="letter" className="relative py-20 md:py-28 px-6">
       <div className="absolute inset-0">
         <img
-          src="/photos/akhil-bg.png"
+          src="/birthday-site/photos/akhil-bg.png"
           alt=""
           className="w-full h-full object-cover"
         />
@@ -100,7 +100,7 @@ export default function LoveLetter() {
             <div className="photo-card" style={{ transform: "rotate(2deg)" }}>
               <div className="aspect-[3/4] overflow-hidden rounded-sm">
                 <img
-                  src="/photos/letter.jpg"
+                  src="/birthday-site/photos/letter.jpg"
                   alt="Us"
                   className="w-full h-full object-cover"
                   onError={(e) => {

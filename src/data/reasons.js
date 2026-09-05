@@ -40,37 +40,37 @@ export const reasons = [
 export const photoGallery = [
   {
     id: 1,
-    image: "/photos/01.jpg",
+    image: "/birthday-site/photos/01.jpg",
     caption: "That smile ❤️",
   },
   {
     id: 2,
-    image: "/photos/02.jpg",
+    image: "/birthday-site/photos/02.jpg",
     caption: "One of my favorite days.",
   },
   {
     id: 3,
-    image: "/photos/03.jpg",
+    image: "/birthday-site/photos/03.jpg",
     caption: "You looked so happy here.",
   },
   {
     id: 4,
-    image: "/photos/04.jpg",
+    image: "/birthday-site/photos/04.jpg",
     caption: "Us.",
   },
   {
     id: 5,
-    image: "/photos/05.jpg",
+    image: "/birthday-site/photos/05.jpg",
     caption: "Perfect moments.",
   },
   {
     id: 6,
-    image: "/photos/06.jpg",
+    image: "/birthday-site/photos/06.jpg",
     caption: "Forever grateful.",
   },
   {
     id: 7,
-    image: "/photos/07.jpg",
+    image: "/birthday-site/photos/07.jpg",
     caption: "My heart is yours.",
   },
 ];
