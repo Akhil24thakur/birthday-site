@@ -41,7 +41,7 @@ export default function LoveLetter() {
           alt=""
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-dark/80" />
+        <div className="absolute inset-0 bg-dark/50" />
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto">

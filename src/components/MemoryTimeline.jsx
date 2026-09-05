@@ -29,7 +29,8 @@ function MemoryCard({ memory, index, onImageClick }) {
               src={memory.image}
               alt={memory.caption || memory.title}
               loading="lazy"
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              className="w-full h-full object-cover"
+              style={{ objectPosition: "center 30%" }}
               onError={(e) => {
                 e.target.style.display = "none";
                 e.target.nextSibling.style.display = "flex";
