@@ -19,8 +19,6 @@ I love you. Always and forever. ❤️`;
 export const finalMessage = {
   heading: "Happy Birthday, My Love ❤️",
   lines: [
-    "Here's to all the memories we've already made...",
-    "...and all the ones still waiting for us.",
     "I love you. ❤️",
   ],
 };
