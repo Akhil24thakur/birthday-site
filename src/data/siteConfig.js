@@ -9,7 +9,7 @@ export const siteConfig = {
 
   music: {
     enabled: true,
-    src: "/music/song.mp3",
+    src: "/birthday-site/song.mp3",
     autoplay: true,
   },
 

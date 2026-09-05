@@ -29,7 +29,7 @@ export default function SurpriseSection() {
   };
 
   return (
-    <section id="surprise" className="relative py-20 md:py-28 px-6">
+    <section id="surprise" className="relative pt-32 pb-20 md:pt-40 md:pb-28 px-6">
       <div className="absolute inset-0 bg-gradient-to-b from-dark via-dark-lighter to-dark" />
 
       <div className="relative z-10 max-w-lg mx-auto">
@@ -63,7 +63,7 @@ export default function SurpriseSection() {
               whileHover={{ scale: 1.06 }}
               whileTap={{ scale: 0.95 }}
               onClick={handleOpen}
-              className="px-14 py-5 rounded-full bg-gradient-to-r from-rose to-pink text-white text-xl md:text-2xl font-bold shadow-xl shadow-rose/40 hover:shadow-rose/60 hover:brightness-110 transition-all cursor-pointer border-2 border-white/20"
+              className="px-16 py-6 rounded-full bg-gradient-to-r from-rose to-pink text-white text-2xl md:text-3xl font-bold shadow-2xl shadow-rose/50 hover:shadow-rose/70 hover:brightness-110 transition-all cursor-pointer border-2 border-white/20"
               style={{ animation: "pulse-glow 2s ease-in-out infinite" }}
             >
               Open Your Surprise ❤️

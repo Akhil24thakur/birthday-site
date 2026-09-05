@@ -20,12 +20,12 @@ function GalleryPhoto({ photo, index, onImageClick }) {
       onKeyDown={(e) => e.key === "Enter" && onImageClick(index)}
       aria-label={`View: ${photo.caption}`}
     >
-      <div className="aspect-[3/4] overflow-hidden">
+      <div className="aspect-square overflow-hidden">
         <img
           src={photo.image}
           alt={photo.caption}
           loading="lazy"
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
           onError={(e) => {
             e.target.style.display = "none";
             e.target.nextSibling.style.display = "flex";
