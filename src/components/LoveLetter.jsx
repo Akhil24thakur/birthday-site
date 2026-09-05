@@ -34,7 +34,7 @@ export default function LoveLetter() {
   const textToShow = siteConfig.typewriter.enabled ? displayText : birthdayLetter;
 
   return (
-    <section id="letter" className="relative py-20 md:py-28 pb-48 md:pb-64 px-6">
+    <section id="letter" className="relative py-20 md:py-28 pb-64 md:pb-80 px-6">
       <div className="absolute inset-0">
         <img
           src="/birthday-site/photos/akhil-bg.png"
