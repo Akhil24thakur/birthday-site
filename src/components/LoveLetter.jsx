@@ -73,6 +73,7 @@ export default function LoveLetter() {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.2 }}
             className="letter-paper px-8 md:px-12 py-6 md:py-8 flex-1"
+            style={{ paddingRight: "2px" }}
           >
             <div className="text-sm text-cream/55 leading-loose whitespace-pre-line">
               {textToShow}
