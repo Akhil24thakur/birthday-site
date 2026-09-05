@@ -75,7 +75,7 @@ export default function LoveLetter() {
             className="letter-paper px-8 md:px-12 py-6 md:py-8 flex-1"
             style={{ paddingLeft: "4px", paddingRight: "2px" }}
           >
-            <div className="text-sm text-cream/55 leading-loose whitespace-pre-line">
+            <div className="text-sm text-rose leading-loose whitespace-pre-line">
               {textToShow}
               {siteConfig.typewriter.enabled && !typingDone && inView && (
                 <span className="typewriter-cursor" />
