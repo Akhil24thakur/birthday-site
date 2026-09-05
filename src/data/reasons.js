@@ -73,9 +73,4 @@ export const photoGallery = [
     image: "/photos/07.jpg",
     caption: "My heart is yours.",
   },
-  {
-    id: 8,
-    image: "/photos/08.jpg",
-    caption: "Always.",
-  },
 ];
