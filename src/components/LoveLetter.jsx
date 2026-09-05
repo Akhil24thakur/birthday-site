@@ -37,13 +37,13 @@ export default function LoveLetter() {
     <section id="letter" className="relative py-20 md:py-28 px-6">
       <div className="absolute inset-0 bg-gradient-to-b from-dark via-dark-mid to-dark" />
 
-      <div className="relative z-10 max-w-xl mx-auto text-center">
+      <div className="relative z-10 max-w-5xl mx-auto">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="mb-8"
+          className="text-center mb-8"
         >
           <div className="section-divider mb-6" />
           <h2
@@ -60,28 +60,60 @@ export default function LoveLetter() {
           </p>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="letter-paper p-6 md:p-8 text-center"
-        >
-          <div className="text-sm text-cream/55 leading-loose whitespace-pre-line text-left inline-block">
-            {textToShow}
-            {siteConfig.typewriter.enabled && !typingDone && inView && (
-              <span className="typewriter-cursor" />
-            )}
-          </div>
+        <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="letter-paper p-6 md:p-8 flex-1"
+          >
+            <div className="text-sm text-cream/55 leading-loose whitespace-pre-line">
+              {textToShow}
+              {siteConfig.typewriter.enabled && !typingDone && inView && (
+                <span className="typewriter-cursor" />
+              )}
+            </div>
 
-          <div className="mt-6">
+            <div className="mt-6 text-center">
+              <p
+                className="text-sm text-rose-light/50 italic"
+                style={{ fontFamily: "var(--font-handwriting)" }}
+              >
+                With all my love ❤️
+              </p>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.7, delay: 0.4 }}
+            className="hidden md:block w-72 lg:w-80 flex-shrink-0"
+          >
+            <div className="photo-card" style={{ transform: "rotate(2deg)" }}>
+              <div className="aspect-[3/4] overflow-hidden rounded-sm">
+                <img
+                  src="/photos/letter.jpg"
+                  alt="Us"
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.target.style.display = "none";
+                    e.target.nextSibling.style.display = "flex";
+                  }}
+                />
+                <div className="absolute inset-0 bg-dark-mid/40 flex items-center justify-center text-cream/30 text-xs hidden">
+                  📷
+                </div>
+              </div>
+            </div>
             <p
-              className="text-sm text-rose-light/50 italic"
+              className="text-center text-xs text-cream/30 mt-2 italic"
               style={{ fontFamily: "var(--font-handwriting)" }}
             >
-              With all my love ❤️
+              Always together ❤️
             </p>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
