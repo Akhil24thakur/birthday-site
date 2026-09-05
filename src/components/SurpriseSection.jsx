@@ -29,7 +29,7 @@ export default function SurpriseSection() {
   };
 
   return (
-    <section id="surprise" className="relative pt-32 pb-20 md:pt-40 md:pb-28 px-6">
+    <section id="surprise" className="relative pt-40 pb-20 md:pt-52 md:pb-28 px-6">
       <div className="absolute inset-0 bg-gradient-to-b from-dark via-dark-lighter to-dark" />
 
       <div className="relative z-10 max-w-lg mx-auto">
