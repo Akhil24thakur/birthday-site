@@ -17,6 +17,7 @@ import CursorGlow from "./components/CursorGlow";
 import MusicController from "./components/MusicController";
 import BirthdayCountdown from "./components/BirthdayCountdown";
 import EasterEgg from "./components/EasterEgg";
+import AutoScroll from "./components/AutoScroll";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -46,6 +47,7 @@ export default function App() {
           {siteConfig.effects.cursorGlow && <CursorGlow />}
           <Navigation />
           <MusicController />
+          <AutoScroll />
 
           <main>
             <Hero />

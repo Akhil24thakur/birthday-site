@@ -81,7 +81,7 @@ export default function MemoryTimeline({ memories }) {
   const lineInView = useInView(lineRef, { once: true, margin: "-100px" });
 
   return (
-    <section className="relative py-20 md:py-32 px-6">
+    <section id="timeline" className="relative py-20 md:py-32 px-6">
       <div className="absolute inset-0 bg-gradient-to-b from-dark via-dark-lighter to-dark" />
 
       <div className="relative z-10 max-w-5xl mx-auto">

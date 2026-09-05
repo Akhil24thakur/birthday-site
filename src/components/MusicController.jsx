@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Music, VolumeX } from "lucide-react";
 import { siteConfig } from "../data/siteConfig";
@@ -6,14 +6,34 @@ import { siteConfig } from "../data/siteConfig";
 export default function MusicController() {
   const [playing, setPlaying] = useState(false);
   const [showLabel, setShowLabel] = useState(false);
+  const [tryingAutoplay, setTryingAutoplay] = useState(true);
   const audioRef = useRef(null);
 
-  useEffect(() => {
-    const stored = sessionStorage.getItem("birthday-music");
-    if (stored === "playing" && siteConfig.music.autoplay) {
+  const tryAutoplay = useCallback(() => {
+    if (!siteConfig.music.autoplay || !audioRef.current) return;
+    if (sessionStorage.getItem("birthday-music") === "paused") return;
+
+    audioRef.current.play().then(() => {
       setPlaying(true);
-    }
+      setTryingAutoplay(false);
+    }).catch(() => {
+      // Autoplay blocked - wait for user interaction
+    });
+
+    window.removeEventListener("click", tryAutoplay);
+    window.removeEventListener("touchstart", tryAutoplay);
   }, []);
+
+  useEffect(() => {
+    if (!siteConfig.music.enabled || !siteConfig.music.autoplay) return;
+
+    window.addEventListener("click", tryAutoplay, { once: true });
+    window.addEventListener("touchstart", tryAutoplay, { once: true });
+    return () => {
+      window.removeEventListener("click", tryAutoplay);
+      window.removeEventListener("touchstart", tryAutoplay);
+    };
+  }, [tryAutoplay]);
 
   useEffect(() => {
     if (!audioRef.current) return;
@@ -40,7 +60,7 @@ export default function MusicController() {
               className="absolute right-14 top-1/2 -translate-y-1/2 glass rounded-lg px-3 py-1.5 whitespace-nowrap"
             >
               <p className="text-xs text-cream/70">
-                {playing ? "Playing our song..." : "Music paused"}
+                {playing ? "Playing our song..." : "Tap to play music"}
               </p>
             </motion.div>
           )}
@@ -57,7 +77,7 @@ export default function MusicController() {
         </button>
       </div>
 
-      <audio ref={audioRef} src={siteConfig.music.src} loop preload="none" />
+      <audio ref={audioRef} src={siteConfig.music.src} loop preload="auto" />
     </div>
   );
 }

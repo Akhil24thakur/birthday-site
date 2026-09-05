@@ -8,9 +8,9 @@ export const siteConfig = {
   birthdayDate: "2026-09-05",
 
   music: {
-    enabled: false,
+    enabled: true,
     src: "/music/song.mp3",
-    autoplay: false,
+    autoplay: true,
   },
 
   effects: {

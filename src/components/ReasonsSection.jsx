@@ -33,7 +33,7 @@ export default function ReasonsSection() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="relative py-20 md:py-32 px-6">
+    <section id="reasons" className="relative py-20 md:py-32 px-6">
       <div className="absolute inset-0 bg-gradient-to-b from-dark via-dark-lighter to-dark" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-rose/3 blur-[130px]" />
 

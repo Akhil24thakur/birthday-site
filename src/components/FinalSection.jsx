@@ -13,6 +13,7 @@ export default function FinalSection() {
 
   return (
     <section
+      id="final"
       ref={ref}
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
