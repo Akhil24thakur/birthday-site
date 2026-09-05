@@ -1,15 +1,5 @@
 export const memories = [
   {
-    id: 1,
-    date: "12 June 2024",
-    title: "Where It Started",
-    image: "/birthday-site/memories/01.jpg",
-    caption: "The beginning of something beautiful.",
-    description:
-      "Replace this with our actual memory. The day everything started — the first moment I knew you were special.",
-    rotation: -2,
-  },
-  {
     id: 2,
     date: "28 July 2024",
     title: "That Beautiful Day",

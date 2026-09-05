@@ -60,10 +60,11 @@ export default function SurpriseSection() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
-              whileHover={{ scale: 1.04 }}
-              whileTap={{ scale: 0.96 }}
+              whileHover={{ scale: 1.06 }}
+              whileTap={{ scale: 0.95 }}
               onClick={handleOpen}
-              className="px-10 py-4 rounded-full bg-gradient-to-r from-rose to-pink text-white text-base font-semibold shadow-lg shadow-rose/25 hover:shadow-rose/40 transition-shadow"
+              className="px-14 py-5 rounded-full bg-gradient-to-r from-rose to-pink text-white text-xl md:text-2xl font-bold shadow-xl shadow-rose/40 hover:shadow-rose/60 hover:brightness-110 transition-all cursor-pointer border-2 border-white/20"
+              style={{ animation: "pulse-glow 2s ease-in-out infinite" }}
             >
               Open Your Surprise ❤️
             </motion.button>

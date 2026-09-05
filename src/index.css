@@ -79,6 +79,11 @@ body {
   50% { transform: translateY(6px); opacity: 0.8; }
 }
 
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(212, 132, 159, 0.4), 0 0 40px rgba(212, 132, 159, 0.2); }
+  50% { box-shadow: 0 0 30px rgba(212, 132, 159, 0.6), 0 0 60px rgba(212, 132, 159, 0.3); }
+}
+
 @keyframes ken-burns {
   from { transform: scale(1.0); }
   to { transform: scale(1.06); }
