@@ -24,13 +24,13 @@ function MemoryCard({ memory, index, onImageClick }) {
           onKeyDown={(e) => e.key === "Enter" && onImageClick(index)}
           aria-label={`View ${memory.title}`}
         >
-          <div className="relative overflow-hidden rounded-sm aspect-[4/3]">
+          <div className="relative overflow-hidden rounded-sm aspect-[3/4]">
             <img
               src={memory.image}
               alt={memory.caption || memory.title}
               loading="lazy"
               className="w-full h-full object-cover"
-              style={{ objectPosition: "center 30%" }}
+              style={{ objectPosition: "center center" }}
               onError={(e) => {
                 e.target.style.display = "none";
                 e.target.nextSibling.style.display = "flex";
